@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+{% block head %}
+	<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="{% static '/css/login.css'%}" />
+    </head>
+{% endblock %}
+
+    <body>
+        {% block content %}
+        <main class="main">
+            <section class="login_user">
+                <div class="container">
+                    <div class="content">
+                        <div class="comtent_img">
+                            <img src="{% static 'img/a.webp' %}" alt="" class="img_login">
+                        </div>
+                        <div class="content_login_boxs">
+                            <div class="content_login_box">
+                                <h4 class="login_header_titel">ورود به حساب کاربری</h4>
+                                <form action="" method="post">
+                                 {% csrf_token %}
+                                <a href="">ثبت نام</a> | <a href="">ورود</a>
+                                <label for="" class="label_user"></label>
+                                 <input name="username" type="text" class="input_user" placeholder="نام کاربری ">
+                                 <br>
+                                 <label for="" class="label_pass"></label>
+                                 <input name="password" type="password" class="input_pass" placeholder="رمز عبور">
+                                 <div class="login_buttom">
+                                 <button type="submit" class="btm_login">
+                                     ورود
+                                 </button>
+                                 </div>
+                                </form>
+                            </div>
+                            <div class="caption">
+                                <p>ثبت نام شما به معنای پذیرش قوانین و مقررات ویس است.</p>
+                            </div>
+                        </div>
+                        </div>
+
+                </div>
+            </section>
+        </main>
+
+        <script src="scripts/app.js"></script>
+    </body>
+    {% endblock %}
+</html>
