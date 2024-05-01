@@ -457,7 +457,7 @@ body{
 
 }
 .input_user{
- border-radius: 1rem;
+ border-radius: 0.5rem;
  padding: 1rem;
  margin-bottom: 1rem;
  background-color:#E5E7EB;
@@ -471,7 +471,7 @@ body{
 }
 .input_pass{
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color:#E5E7EB;
   border: none;
 
