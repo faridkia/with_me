@@ -435,13 +435,16 @@ body{
   max-height: 100%;
   max-width: 100%;
 }
-.content_login_box{
+.content_login_boxs{
   font-family: dana-light;
   background-color: #fff;
   border: 1px solid #E5E7EB ;
   height:100% ;
   padding: 1.5rem 4.5rem;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 
 }
 .login_header_titel{
@@ -493,6 +496,17 @@ body{
   
 
 
+}
+.content_login_box{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  
+}
+.caption{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
 }
 
 
