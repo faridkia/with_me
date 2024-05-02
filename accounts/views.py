@@ -39,13 +39,14 @@ class SignUpView(View):
         return super().dispatch(request, *args, **kwargs)
     def get(self, request):
         form = SignUpForm()
-        return render(request, 'accounts/login.html', {'form': form})
+        return render(request, 'accounts/signup.html', {'form': form})
 
     def post(self, request):
         form = SignUpForm()
         if form.is_valid():
             user = User.objects.create(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             user.save()
+            login(request, user)
             return redirect('accounts:home')
 
 
