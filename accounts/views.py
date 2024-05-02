@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic import View
-from .forms import LoginForm
+from .forms import LoginForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from .models import User
 
@@ -30,6 +30,24 @@ class LoginView(View):
                 return redirect('accounts:home')
             message = 'Login failed!'
         return render(request, 'base.html', context={'form': form})
+
+
+class SignUpView(View):
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('accounts:home')
+        return super().dispatch(request, *args, **kwargs)
+    def get(self, request):
+        form = SignUpForm()
+        return render(request, 'accounts/login.html', {'form': form})
+
+    def post(self, request):
+        form = SignUpForm()
+        if form.is_valid():
+            user = User.objects.create(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
+            user.save()
+            return redirect('accounts:home')
+
 
 def user_logout(request):
     logout(request)
