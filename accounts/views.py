@@ -29,7 +29,7 @@ class LoginView(View):
                 login(request, user)
                 return redirect('accounts:home')
             message = 'Login failed!'
-        return render(request, 'base.html', context={'form': form})
+        return render(request, 'accounts/login.html', context={'form': form})
 
 
 class SignUpView(View):
@@ -37,17 +37,19 @@ class SignUpView(View):
         if request.user.is_authenticated:
             return redirect('accounts:home')
         return super().dispatch(request, *args, **kwargs)
+
     def get(self, request):
         form = SignUpForm()
-        return render(request, 'accounts/signup.html', {'form': form})
+        return render(request, 'accounts/sing-in.html', {'form': form})
 
     def post(self, request):
-        form = SignUpForm()
+        form = SignUpForm(request.POST)
         if form.is_valid():
             user = User.objects.create(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             user.save()
             login(request, user)
             return redirect('accounts:home')
+        return render(request, 'accounts/sing-in.html', context={'form': form})
 
 
 def user_logout(request):
