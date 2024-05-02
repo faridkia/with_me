@@ -380,8 +380,8 @@ body {
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
+    margin-right:2px;
+    margin-left:2px;
 }
 
 html {
@@ -395,11 +395,9 @@ html {
 }
 
 body {
-    font-family: "TTNorms";
+  font-family: "TTNorms";
 }
 
-.container {
-}
 
 
 /* project */
@@ -408,12 +406,8 @@ body{
   background-color:#E5E7EB;
 }
 
-.main{
- 
-
-}
 .login_user{
-
+  
 }
 
 .content{
@@ -422,16 +416,15 @@ body{
   justify-content: center;
   flex-direction: row-reverse;
   height: 100vh;
-  justify-content: space-between;
-
-
+  
+  
 }
-.comtent_img{
-
+.content_img{
+  max-height: 100%;
+  background-color:red ;
+  
 }
 .img_login{
-  /* width: 400px;
-  height: 300px; */
   max-height: 100%;
   max-width: 100%;
 }
@@ -439,62 +432,18 @@ body{
   font-family: dana-light;
   background-color: #fff;
   border: 1px solid #E5E7EB ;
+  padding: 1.5rem 4rem;
   height:100% ;
-  padding: 1.5rem 4.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-
-}
-.login_header_titel{
-  text-align: center;
-  font-family: dana-bold;
-  font-size: larger;
-  margin-top: 5.5rem;
-
-}
-.label_user{
-  margin-bottom: 0.5rem;
-  display: block;
-
-}
-.input_user{
- border-radius: 0.5rem;
- padding: 1rem;
- margin-bottom: 1rem;
- background-color:#E5E7EB;
- border: none;
-
-}
-.label_pass{
-  display: block;
-  margin-bottom: 0.5rem;
-
-}
-.input_pass{
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background-color:#E5E7EB;
-  border: none;
-
-}
-.login_buttom{
-  margin-top: 1rem;
-  align-items: center;
-
-}
-.btm_login{
-  margin-top: 1.5rem;
-  background: #2196F3;
-  width: 5rem;
-  height: 2.5rem;
-  border: none;
-  text-align: center;
-  border-radius: 10px;
-  margin-right: 3.75rem;
+  height: 100%;
   
-
+}
+.content_login_box{
+  
+}
+.form{
 
 }
 .content_login_box{
@@ -503,26 +452,110 @@ body{
   align-content: flex-end;
   
 }
-.caption{
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-end; */
+.login_header_titel{
+  text-align: center;
+  font-family: dana-bold;
+  font-size: 32px;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  
+}
+.login_sigh_in_linl{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 2rem;
+  
+  
+}
+.link{
+  text-decoration: none;
+  color: black;
 }
 
+.label_user{
+  margin-bottom: 0.5rem;
+  display: block;
+  
+}
+.input_user{
+  border-radius: 0.5rem;
+  padding: 1rem;
 
+  background-color:#E5E7EB;
+  border: none;
+  
+}
+.label_pass{
+  display: block;
+  margin-bottom: 0.5rem;
+  
+}
+.input_pass{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color:#E5E7EB;
+  border: none;
+  
+}
+.recovery_password{
+  margin-right: 4px;
+  text-decoration: none;
+  
+}
+.password_recovery_link{
+  text-decoration: none;
+  font-size: 15px;
+}
 
+.login_buttom{
+  margin: 0 auto;
+  
+}
+.btm_login{
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: #2196F3;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+  padding:1rem 6rem ;
 
+}
+.btm_login_link{
+  text-decoration: none;
+  color: black;
+}
 
+.sign_in_in_login{
+  padding-top: 1rem;
+  text-align: center;
+  text-decoration: none;
 
-/* media query */
-/* Project Responsive */
+}
+.sing_in_link{
+  text-decoration: none;
+  font-size: 18px;
 
-@media only screen and (max-width: 1200px) {
+}
+  
+  .caption{
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  /* media query */
+  /* Project Responsive */
+  
+  @media only screen and (max-width: 1200px) {
     .container {
-        max-width: 960px;
+      max-width: 960px;
     }
-}
-
+  }
+  
 @media only screen and (max-width: 992px) {
     .container {
         max-width: 720px;
