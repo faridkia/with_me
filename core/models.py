@@ -1,5 +1,6 @@
 from django.db import models
 from accounts.models import User
+from django.utils.text import slugify
 class Feeling(models.Model):
     CHOICES = (
         ('khosh', 'خوشحال'),
@@ -19,10 +20,14 @@ class Book(models.Model):
     description = models.TextField(max_length=500)
     author = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ایجاد')
+    slug = models.SlugField(default='', null=True, blank=True)
 
     def __str__(self):
         return f'{self.name}'
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Book, self).save(*args, **kwargs)
     class Meta:
         ordering = ['-created_at']
 class Podcast(models.Model):
@@ -38,6 +43,9 @@ class Podcast(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Podcast, self).save(*args, **kwargs)
 class Score_User(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='podcast_scores')
     podcast = models.ForeignKey(Podcast, on_delete=models.CASCADE, related_name='scores')
@@ -89,6 +97,10 @@ class Video(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Video, self).save(*args, **kwargs)
+
 class Song(models.Model):
     feeling = models.ForeignKey(Feeling, on_delete=models.PROTECT, related_name='podcasts')
     name = models.CharField(max_length=50)
@@ -102,3 +114,7 @@ class Song(models.Model):
 
     class Meta:
         ordering = ['-created_at']
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Song, self).save(*args, **kwargs)
