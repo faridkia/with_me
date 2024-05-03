@@ -27,12 +27,12 @@ class SongDetailView(View):
 class PodcastDetailView(View):
     def get(self, request, quality, id):
         feeling = get_object_or_404(Feeling, quality=quality)
-        podcast = Book.objects.filter(feeling=feeling, id=id)
+        podcast = Podcast.objects.filter(feeling=feeling, id=id)
         return render(request, '', {'podcast': podcast})
 
 class VideoDetailView(View):
     def get(self, request, quality, id):
         feeling = get_object_or_404(Feeling, quality=quality)
-        video = Book.objects.filter(feeling=feeling, id=id)
+        video = Video.objects.filter(feeling=feeling, id=id)
         return render(request, '', {'video': video})
 
