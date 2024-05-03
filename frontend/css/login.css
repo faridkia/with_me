@@ -421,7 +421,6 @@ body{
 }
 .content_img{
   max-height: 100%;
-  background-color:red ;
   
 }
 .img_login{
@@ -572,4 +571,8 @@ body{
     .container {
         max-width: 100%;
     }
+    .content_img{
+      display: none;
+    }
+
 }
