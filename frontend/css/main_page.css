@@ -385,7 +385,6 @@
   
   body {
       font-family: "TTNorms";
-      overflow: hidden;
   }
   
   html {
@@ -541,7 +540,7 @@ margin: 2rem 0;
 
 
 
-/* start_footer
+start_footer
 .footer{
   font-family: dana-light;
   background:#fff;
@@ -587,7 +586,7 @@ margin: 2rem 0;
   flex-direction: row;
   justify-content: space-between;
   
-} */
+}
 
 
 
