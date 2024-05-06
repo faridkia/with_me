@@ -406,19 +406,10 @@
     background-color:#E5E7EB;
     height: 100dvh;
   }
-  
-  .login_user{
-    
-  }
-  
   .content{
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     flex-direction: row-reverse;
     height: 100vh;
-    
-    
   }
   .content_img{
     height: 100%;
@@ -432,7 +423,7 @@
     font-family: dana-light;
     background-color: #fff;
     border: 1px solid #E5E7EB ;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 1.5rem;
     height:100% ;
     display: flex;
     flex-direction: column;
@@ -440,12 +431,7 @@
     height: 100%;
     
   }
-  .content_login_box{
-    
-  }
-  .form{
-  
-  }
+
   .content_login_box{
     display: flex;
     flex-direction: column;
@@ -523,7 +509,7 @@
   }
   .btm_login_link{
     text-decoration: none;
-    color: black;
+    color:#fff;
   }
   
   .sign_in_in_login{
