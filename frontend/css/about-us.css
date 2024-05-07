@@ -63,7 +63,7 @@
      */
     
     h1 {
-      font-size: 2em;
+      font-size: 4em;
       margin: 0.67em 0;
     }
     
@@ -510,6 +510,7 @@
 }
 p{
   text-transform: lowercase;
+  font-size: 19px;
 }
 h1{
   margin-bottom: 4rem;

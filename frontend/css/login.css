@@ -403,23 +403,25 @@ body {
 /* project */
 
 body{
-  background-color:#E5E7EB;
+  background-color:#E3F2FD;
 }
 
 .content{
   display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-end;
   height: 100vh;
-  
+  align-items: center;
   
 }
 .content_img{
-  max-height: 100%;
+  max-width: 50rem;
   
 }
 .img_login{
   height: 100%;
   width: 100%;
+  margin-right: 6rem;
 }
 .content_login_boxs{
   font-family: dana-light;
@@ -469,7 +471,7 @@ body{
   border-radius: 0.5rem;
   padding: 1rem;
 
-  background-color:#E5E7EB;
+  background-color:#E3F2FD;
   border: none;
   
 }
@@ -481,7 +483,7 @@ body{
 .input_pass{
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color:#E5E7EB;
+  background-color:#E3F2FD;
   border: none;
   
 }
