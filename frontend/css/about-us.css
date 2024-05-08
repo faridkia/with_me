@@ -443,10 +443,8 @@
 
 
 .nav_logo_img{
-  width: 130px;
-  height: 65px;
-  object-fit: cover
-
+  width: 90px;
+  height: 45px;
 }
 .menu{
     list-style-type: none;
