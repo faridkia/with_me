@@ -579,7 +579,14 @@ text-align: center;
   border-radius: 10px;
   color: #fff;
 }
+h2.fade-out {
+  opacity: 0;
+}
 
+h2.fade-in {
+  opacity: 1;
+  transition: ease 0.25s;
+}
 #category_row_1{
   background: rgb(253,83,34);
   background: linear-gradient(61deg, rgba(253,83,34,1) 0%, rgba(253,70,29,1) 40%, rgba(242,252,69,1) 100%);

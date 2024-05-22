@@ -98,5 +98,111 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const box1 = document.querySelector('#category_row_1');
+            const box2 = document.querySelector('#category_row_2');
+            const box3 = document.querySelector('#category_row_3');
+            const box4 = document.querySelector('#category_row_4');
+            
+            box1.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+                    h1_1.textContent = 'کتاب';
+                    h1_2.textContent = 'فیلم';
+                    h1_3.textContent = 'پادکست';
+                    h1_4.textContent = 'آهنگ';                    
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250); 
+            });
+            box2.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+                    h1_1.textContent = 'کتاب';
+                    h1_2.textContent = 'فیلم';
+                    h1_3.textContent = 'پادکست';
+                    h1_4.textContent = 'آهنگ';                    
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250); 
+            });
+            box3.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+                    h1_1.textContent = '<a href="www.skamacadeny.ir">skam</a>';
+                    h1_2.textContent = 'فیلم';
+                    h1_3.textContent = 'پادکست';
+                    h1_4.textContent = 'آهنگ';                    
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250); 
+            });
+            box4.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+                    h1_1.textContent = 'کتاب';
+                    h1_2.textContent = 'فیلم';
+                    h1_3.textContent = 'پادکست';
+                    h1_4.textContent = 'آهنگ';                    
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250); 
+            });
+        });
+    </script>
 </body>
+
 </html>
