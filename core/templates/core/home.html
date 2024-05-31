@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
+</head>
+{% endblock %}
+{% block content %}
+<body>
+    <header class="header">
+        <div class="container">
+            <section class="header_top">
+                <div class="nav">
+                    <div class="nav_logo">
+                        <img src="{% static 'img/1.png' %}" alt="" class="nav_logo_img">
+                    </div>
+                    <ul class="menu">
+                        <li class="menu_item"><a href="{% url 'core:home' %}" class="menu_item_link">صفحه اصلی</a></li>
+                        <li class="menu_item"><a href="../frontend/about-us.html" class="menu_item_link" >درباره ما</a></li>
+                    </ul>
+                </div>
+                <a href="{% url 'accounts:login' %}" class="heder_link">ورود|ثبت نام</a>
+            </section>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="main_header">
+                <div class="main_header_content">
+                    <h2 class="main_titel"> with me</h2>
+                    <p class="main_txt"> برای دوستی با شما طراحی شده است، که از طریق فیلم ها ، کتاب ها ، آهنگ ها و پادکست سعی می کند با شما ارتباط برقرار کند تا حال و آینده شما را بهتر کند</p>
+                    <a href="#category" class="main_button">بزن بریم</a>
+                </div>
+                <div class="main_header_imgs">
+                    <img src="{% static 'img/header-img.svg' %}" alt="" class="main_header_img">
+                </div>
+            </section>
+
+            <section class="main_plan">
+                <div class="main_plan_imgs">
+                    <img src="{% static 'img/main-img.svg' %}" alt="" class="main_plan_img">
+                </div>
+                <div class="main_plan_content">
+                    <h4 class="main_plan_header">برنامه ریزی</h4>
+                    <p class="main_plan_txt">برای اینکه افراد بتوانید نتیجه بهتری از فعالیت های خود در روز بگیرند میتوانند که برای خود برنامه ریزی کنند <br>
+                    با برنامه ریزی شما میتوانید به هدف های خود سریع تر دست پیدا کنند.<br>
+                        برای مثال شما میتوانید به مدت 1 ساعت در روز صرف مشاهده فیلم و سریال کنید.همچنین پیشنهاد میشود به گوش دادن روز حداقل چند موسیقی حال خودتان را بهتر کنید.
+                         برای بعضی ها هم کتاب خواندن میتواند مفید باشد که توصیه میشود حداقل روزی 15 دقیقه برای خواندن کتاب وقت بگزارند . <br>
+                          بعضی از افراد به جای وقت گزاشتن در شبکه های اجتمایی میتواندد با گوش دادان به پادکست های در زمینه های علمی ورزشی و یا توسعه فردی به رشد خوندشون کمک کنند .پیشنهاد میشود که هنگامی که خسته هستید یا انرژی کافی برای انجام کاری را نداریدوگوش دادن به پادکست به مدت 10 تا 20 دقیقه میتواند نتایج باور نکردنی ای را برای شما به ارمقان آورد. <br></p>
+                </div>
+            </section>
+
+            <section class="main_categorys" id="category">
+                <div class="main_category">
+                   <h1 style="margin-bottom: 40px;">چه حسی داری؟</h1>
+                   <div class="category_box_1">
+                        <div class="category_row" id="category_row_1">
+                            <h2 style="z-index: 3">خوشحالم 😁</h2>
+                            <div style="z-index: 2" class="overlay"></div>
+                        </div>
+                        <div class="category_row" id="category_row_2">
+                            <h2 style="z-index: 3">خوبم 🙂</h2>
+                            <div style="z-index: 2" class="overlay"></div>
+                        </div>
+                   </div>
+                   <div class="category_box_2">
+                    <div class="category_row" id="category_row_3">
+                        <h2 style="z-index: 3">ناراحتم 😞</h2>
+                        <div style="z-index: 2" class="overlay"></div>
+                    </div>
+                    <div class="category_row" id="category_row_4">
+                        <h2 style="z-index: 3">عصبانیم 😠</h2>
+                        <div style="z-index: 2" class="overlay"></div>
+                    </div>
+                   </div>
+                </div>
+                <div class="category_img">
+                    <img src="{% static 'img/na_january_44.jpg' %}" alt="" class="main_category_img">
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_bottom">
+                <div class="footer_right">
+                    <h3 class="footer_about_header">اطلاعات تماس</h3>
+                    <p class="footer_p"><strong>آدرس:</strong>مازندران-بابل-امامزاده قاسم-هادی 11.1</p>
+                    <p class="footer_p"><strong>شماره تماس:</strong>09115673743</p>
+                    <p class="footer_p"><strong>ایمیل:</strong>sajjad.kafshgar123@gmail.com</p>
+                </div>
+                <div class="footer_left">
+                    <div><img src="" alt="" class="footer img"></div>
+                    <div class="flex">
+                        <div class="footer_contact_platforms"> </div>
+                        <div class="footer_logos"><img src="{% static 'img/1 - Copy.png' %}" alt="" class="footer_logo"></div>
+                    </div>
+                    <div class="footer_contact_about"><p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در </p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const box1 = document.querySelector('#category_row_1');
+            const box2 = document.querySelector('#category_row_2');
+            const box3 = document.querySelector('#category_row_3');
+            const box4 = document.querySelector('#category_row_4');
+
+            box1.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                {% song_random_number 1 as song_random_number1 %}
+                    {% book_random_number 1 as book_random_number1 %}
+                    {% podcast_random_number 1 as podcast_random_number1 %}
+                    {% video_random_number 1 as video_random_number1 %}
+                setTimeout(() => {
+                    h1_1.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:book_detail' khosh.quality book_random_number1 %}">کتاب</a>';
+                    h1_2.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:video_detail' khosh.quality video_random_number1 %}">فیلم</a>';
+                    h1_3.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:podcast_detail' khosh.quality podcast_random_number1 %}">پادکست</a>';
+                    h1_4.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:music_detail' khosh.quality song_random_number1 %}">آهنگ</a>';
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250);
+            });
+            box2.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+    {% song_random_number 2 as song_random_number1 %}
+                    {% book_random_number 2 as book_random_number1 %}
+                    {% podcast_random_number 2 as podcast_random_number1 %}
+                    {% video_random_number 2 as video_random_number1 %}
+                    h1_1.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:book_detail' khoob.quality book_random_number1  %}">کتاب</a>';
+                    h1_2.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:video_detail' khoob.quality video_random_number1 %}">فیلم</a>';
+                    h1_3.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:podcast_detail' khoob.quality podcast_random_number1 %}">پادکست</a>';
+                    h1_4.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:music_detail' khoob.quality song_random_number1 %}">آهنگ</a>';
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250);
+            });
+            box3.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+           {% song_random_number 3 as song_random_number1 %}
+                    {% book_random_number 3 as book_random_number1 %}
+                    {% podcast_random_number 3 as podcast_random_number1 %}
+                    {% video_random_number 3 as video_random_number1 %}
+                    h1_1.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:book_detail' na.quality book_random_number1 %}">کتاب</a>';
+                    h1_2.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:video_detail' na.quality video_random_number1 %}">فیلم</a>';
+                    h1_3.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:podcast_detail' na.quality podcast_random_number1 %}">پادکست</a>';
+                    h1_4.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:music_detail' na.quality song_random_number1 %}">آهنگ</a>';
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250);
+            });
+            box4.addEventListener('click', () => {
+                const h1_1 = box1.querySelector('h2');
+                const h1_2 = box2.querySelector('h2')
+                const h1_3 = box3.querySelector('h2')
+                const h1_4 = box4.querySelector('h2')
+                h1_1.classList.add('fade-out');
+                h1_2.classList.add('fade-out');
+                h1_3.classList.add('fade-out');
+                h1_4.classList.add('fade-out');
+                setTimeout(() => {
+           {% song_random_number 4 as song_random_number1 %}
+                    {% book_random_number 4 as book_random_number1 %}
+                    {% podcast_random_number 4 as podcast_random_number1 %}
+                    {% video_random_number 4 as video_random_number1 %}
+                    h1_1.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:book_detail' asab.quality book_random_number1 %}">کتاب</a>';
+                    h1_2.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:video_detail' asab.quality video_random_number1 %}">فیلم</a>';
+                    h1_3.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:podcast_detail' asab.quality podcast_random_number1 %}">پادکست</a>';
+                    h1_4.innerHTML = '<a style="text-decoration: none;color:#fff" href="{% url 'core:music_detail' asab.quality song_random_number1 %}">آهنگ</a>';
+                    h1_1.classList.remove('fade-out');
+                    h1_2.classList.remove('fade-out');
+                    h1_3.classList.remove('fade-out');
+                    h1_4.classList.remove('fade-out');
+                    h1_1.classList.add('fade-in');
+                    h1_2.classList.add('fade-in');
+                    h1_3.classList.add('fade-in');
+                    h1_4.classList.add('fade-in');
+                }, 250);
+            });
+        });
+    </script>
+</body>
+{% endblock %}
+</html>

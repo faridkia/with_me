@@ -14,7 +14,6 @@ class LoginView(View):
         if request.user.is_authenticated:
             return redirect('accounts:home')
         return super().dispatch(request, *args, **kwargs)
-
     def get(self, request):
         form = LoginForm()
         return render(request, 'accounts/login.html', {'form':form})
