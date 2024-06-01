@@ -6,13 +6,11 @@ from .models import User
 
 
 
-def home(request):
-    return HttpResponse(f'Salam{request.user.username}')
 class LoginView(View):
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('accounts:home')
+            return redirect('core:home')
         return super().dispatch(request, *args, **kwargs)
     def get(self, request):
         form = LoginForm()
@@ -26,7 +24,7 @@ class LoginView(View):
             )
             if user is not None:
                 login(request, user)
-                return redirect('accounts:home')
+                return redirect('core:home')
             message = 'Login failed!'
         return render(request, 'accounts/login.html', context={'form': form})
 
@@ -34,7 +32,7 @@ class LoginView(View):
 class SignUpView(View):
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('accounts:home')
+            return redirect('core:home')
         return super().dispatch(request, *args, **kwargs)
 
     def get(self, request):
@@ -53,4 +51,4 @@ class SignUpView(View):
 
 def user_logout(request):
     logout(request)
-    return redirect('accounts:home')
+    return redirect('core:home')

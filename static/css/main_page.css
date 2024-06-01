@@ -472,8 +472,6 @@
     text-decoration: none;
     color: #000;
     margin-right: -100px;
-    display: none;
-
 }
 
 /* start_main */
@@ -673,6 +671,7 @@ h2.fade-in {
   display: flex;
   justify-content: space-between;
   align-items: center;
+    margin-bottom: 5rem;
 }
 .footer_right{
 
@@ -688,8 +687,7 @@ h2.fade-in {
   max-width: 50%;
 }
 .footer_contact_about{
-  
-
+    margin-top: 1.5rem;
 }
 .footer_contact_platforms{
 

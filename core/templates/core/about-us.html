@@ -1,29 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
+{% block head %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/about-us.css">
+    <link rel="stylesheet" href="{% static 'css/about-us.css' %}">
     <title>Document</title>
 </head>
+{% endblock %}
 <body>
-    <header class="header">
-        <div class="container">
-            <section class="header_top">
-                <div class="nav">
-                    <div class="nav_logo">
-                        <img src="./imgs/1.png" alt="" class="nav_logo_img">
-                    </div>
-                    <ul class="menu">
-                        <li class="menu_item"><a href="./main_page.html" class="menu_item_link">صفحه اصلی</a></li>
-                        <li class="menu_item"><a href="" class="menu_item_link" >درباره ما</a></li>
-                    </ul>
-                </div>
-                <a href="./login.html" class="heder_link">ورود|ثبت نام</a>
-            </section>
-        </div>
-    </header>
-
+{% block content %}
     <main class="main">
         <div class="container">
             <section class="about">
@@ -35,7 +23,7 @@
                             پلتفرمی است که شما می توانید آن را همراه و دوست ابدی خود بدانید و به دنبال این است که آینده و حال خوبی داشته باشید.این سایت از طریق،فیلم ها،پاد کست ها،کتاب ها،و اهنگ های با شما ارتباط برقرار می کند تا اوقات خوبی را سپری کنید.ما متوجه شدیم که برای اینکه افراد در زندگی احساس بهتری داشته باشند تا آینده روشنی برای خود بسازند،لازم است دوست و همراهی پیدا کنند که تا ابد در کنارشان باشد و آنها را راهنمایی کنند.
                             </p>
                     </div>
-                    <div class="abou_us_imgs"><img src="./imgs/about_us.jpg" alt="" class="about_us_img"></div>
+                    <div class="about_us_img"><img src="{% static 'img/about_us.jpg' %}" alt="" class="about_us_img"></div>
                 </div>
                 <div class="about_us_s2">
                     <div class="about_us_s.1">
@@ -56,34 +44,6 @@
             </section>
         </div>
     </main>
-
-
-
-
-
-
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer_bottom">
-                <div class="footer_right">
-                    <h3 class="footer_about_header">اطلاعات تماس</h3>
-                    <p class="footer_p"><strong>آدرس:</strong>مازندران-بابل-امامزاده قاسم-هادی 11.1</p>
-                    <p class="footer_p"><strong>شماره تماس:</strong>09115673743</p>
-                    <p class="footer_p"><strong>ایمیل:</strong>sajjad.kafshgar123@gmail.com</p>
-                </div>
-                <div class="footer_left">
-                    <div><img src="" alt="" class="footer img"></div>
-                    <div class="flex">
-                        <div class="footer_contact_platforms"> </div>
-                        <div class="footer_logos"><img src="./imgs/1.png" alt="" class="footer_logo"></div>
-                    </div>
-                    <div class="footer_contact_about"><p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در </p></div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
+{% endblock content %}
 </body>
 </html>

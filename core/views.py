@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-# TODO : all templates, navbar, footer margin down, links ,Debug, data
+# TODO :  links, login, logout ,Debug, data
 from django.shortcuts import get_object_or_404
 from accounts.models import User
 from .models import *
@@ -43,4 +43,8 @@ class VideoDetailView(View):
         video = get_object_or_404(Video, feeling=feeling, id=id)
         videos = Video.objects.all()[0:3]
         return render(request, 'core/video.html', {'video': video, 'videos':videos})
+
+class AboutUsView(View):
+    def get(self, request):
+        return render(request, 'core/about-us.html')
 

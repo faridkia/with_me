@@ -10,25 +10,8 @@
     <link rel="stylesheet" href="{% static 'css/music.css' %}">
 </head>
 {% endblock %}
-{% block content %}
 <body>
-    <header class="header">
-        <div class="container">
-            <section class="header_top">
-                <div class="nav">
-                    <div class="nav_logo">
-                        <img src="./imgs/1.png" alt="" class="nav_logo_img">
-                    </div>
-                    <ul class="menu">
-                        <li class="menu_item"><a href="{% url 'core:home' %}" class="menu_item_link">صفحه اصلی</a></li>
-                        <li class="menu_item"><a href="../frontend/about-us.html" class="menu_item_link" >درباره ما</a></li>
-                    </ul>
-                </div>
-                <a href="./login.html" class="heder_link">ورود|ثبت نام</a>
-            </section>
-        </div>
-    </header>
-
+{% block content %}
     <main class="main">
         <div class="container">
             <section class="books">
@@ -61,7 +44,7 @@
             </section>
         </div>
     </main>
-
+{% endblock content%}
     <footer class="footer">
         <div class="container">
             <div class="footer_bottom">
@@ -83,5 +66,4 @@
         </div>
     </footer>
 </body>
-{% endblock %}
 </html>

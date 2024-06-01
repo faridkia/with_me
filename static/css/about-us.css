@@ -50,6 +50,7 @@
     
     body {
       margin: 0;
+        overflow-y: auto;
     }
     
     /**
@@ -469,8 +470,7 @@
     border-radius: 0.5rem;
     text-decoration: none;
     color: #000;
-    margin-right: -100px;
-
+    margin-right: -50px;
 }
 
 /* start_main */
@@ -517,7 +517,7 @@ h1{
 
 /* start_footer */
 
-.footer{
+footer{
   font-family: dana-light;
   background:#f9f9f9;
   padding: 1rem 0;
@@ -530,6 +530,7 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
+    margin-bottom: 5rem;
 }
 .footer_right{
 
@@ -545,8 +546,7 @@ h1{
   max-width: 50%;
 }
 .footer_contact_about{
-  
-
+    margin-top: 1.5rem;
 }
 .footer_contact_platforms{
 

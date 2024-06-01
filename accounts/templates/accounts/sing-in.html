@@ -12,8 +12,10 @@
         <link rel="stylesheet" href="{% static 'css/sing-in.css' %}" />
     </head>
 {% endblock %}
+<body>
+    {% block header %}
+    {% endblock %}
 {% block content %}
-    <body>
         <section class="login_user">
             <div class="container">
                 <div class="content">
@@ -27,7 +29,7 @@
                             {% csrf_token %}
                             <h4 class="login_header_titel">ثبت نام کاربر</h4>
                             <div class="content_login_box">
-                                <div class="login_sigh_in_linl"><a href="" class="link">ثبت نام</a> | <a href="" class="link">ورود</a></div>
+                                <div class="login_sigh_in_linl"><a href="{% url 'accounts:signup' %}" class="link">ثبت نام</a> | <a href="{% url 'accounts:login' %}" class="link">ورود</a></div>
                                  <label for="username" class="label_user"></label>
                                 {% if form.username.errors %}{{ form.username.errors }}{% endif %}
                                  <input type="text" class="input_user" placeholder="نام کاربری " name="username" id="username" required autofocus>
@@ -51,6 +53,6 @@
             </div>
         </section>
 {#        <script src="scripts/app.js"></script>#}
-    </body>
 {% endblock %}
+    </body>
 </html>

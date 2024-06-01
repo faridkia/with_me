@@ -10,4 +10,5 @@ urlpatterns = [
     path('<str:quality>/music/<int:id>', views.SongDetailView.as_view(), name='music_detail'),
     path('<str:quality>/video/<int:id>', views.VideoDetailView.as_view(), name='video_detail'),
     path('<str:quality>/podcast/<int:id>', views.PodcastDetailView.as_view(), name='podcast_detail'),
+    path('about-us', views.AboutUsView.as_view(), name='about_us'),
 ]

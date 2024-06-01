@@ -12,8 +12,11 @@
         <link rel="stylesheet" href="{% static '/css/login.css'%}" />
     </head>
 {% endblock %}
-{% block content %}
     <body>
+    {% block header %}
+
+    {% endblock %}
+    {% block content %}
         <section class="login_user">
             <div class="container">
                 <div class="content">
@@ -26,7 +29,7 @@
                             {% csrf_token %}
                             <h4 class="login_header_titel">ورود به حساب کاربری</h4>
                             <div class="content_login_box">
-                                <div class="login_sigh_in_linl"><a href="" class="link">ثبت نام</a> | <a href="" class="link">ورود</a></div>
+                                <div class="login_sigh_in_linl"><a href="{% url 'accounts:signup' %}" class="link">ثبت نام</a> | <a href="{% url 'accounts:login' %}" class="link">ورود</a></div>
                                  <label for="username" class="label_user"></label>
                                  <input type="text" class="input_user" placeholder="نام کاربری " name="username" id="username" required autofocus>
                                  <br>
@@ -35,7 +38,7 @@
                                  <h5 class="recovery_password">رمز خود را فراموش کردید؟<a href="" class="password_recovery_link">کلیک کنید </a></h5>
                                  <div class="login_buttom">
                                      <button class="btm_login"><a href="" class="btm_login_link">ورود</a></button>
-                                     <div class="sign_in_in_login"> ثبت نام نکردید؟برای ثبت نام <a href="" class="sing_in_link">کلیک کنید</a></div>
+                                     <div class="sign_in_in_login"> ثبت نام نکردید؟برای ثبت نام <a href="{% url 'accounts:signup' %}" class="sing_in_link">کلیک کنید</a></div>
                                     </div>
                             </div>
                         </form>
@@ -50,6 +53,6 @@
         </section>
 
         <script src="scripts/app.js"></script>
+        {% endblock %}
     </body>
-    {% endblock %}
 </html>
