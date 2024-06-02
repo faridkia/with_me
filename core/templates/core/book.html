@@ -30,7 +30,7 @@
                     {% for boo in books %}
                     	<div class="box">
                         <div class="simages">
-                            <img src="{{ boo.image.url }}" alt="book" class="simage">
+                            <a href="{% url 'core:book_detail' boo.feeling boo.id %}"><img src="{{ boo.image.url }}" alt="book" class="simage"></a>
                         </div>
                         <h3>{{ boo.name }}</h3>
                         <p style="margin-top: -3px;">{{ boo.description | truncatewords:10 }}</p>

@@ -11,17 +11,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link rel="stylesheet" href="{% static '/css/login.css'%}" />
     </head>
+<body>
 {% endblock %}
-    <body>
     {% block header %}
-
     {% endblock %}
     {% block content %}
         <section class="login_user">
             <div class="container">
                 <div class="content">
                     <div class="content_img">
-                        <img src="{% static 'img/a.webp' %}" alt="" class="img_login">
+                        <img src="{% static 'img/4.jpeg' %}" alt="" class="img_login">
                     </div>
 
                     <div class="content_login_boxs">
@@ -37,7 +36,7 @@
                                  <input type="password" class="input_pass" placeholder="رمز عبور" id="password" name="password" required>
                                  <h5 class="recovery_password">رمز خود را فراموش کردید؟<a href="" class="password_recovery_link">کلیک کنید </a></h5>
                                  <div class="login_buttom">
-                                     <button class="btm_login"><a href="" class="btm_login_link">ورود</a></button>
+                                     <button type="submit" class="btm_login"><a href="" class="btm_login_link">ورود</a></button>
                                      <div class="sign_in_in_login"> ثبت نام نکردید؟برای ثبت نام <a href="{% url 'accounts:signup' %}" class="sing_in_link">کلیک کنید</a></div>
                                     </div>
                             </div>
@@ -53,6 +52,8 @@
         </section>
 
         <script src="scripts/app.js"></script>
-        {% endblock %}
-    </body>
+{% endblock %}
+{% block footer %}{% endblock %}
+</body>
+
 </html>

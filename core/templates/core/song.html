@@ -34,7 +34,7 @@
                     {% for son in songs %}
                     <div class="box">
                         <div class="simages">
-                            <img src="{{ son.image.url }}" alt="book" class="simage">
+                            <a href="{% url 'core:music_detail' son.feeling son.id %}"><img src="{{ son.image.url }}" alt="song" class="simage"></a>
                         </div>
                         <h3>{{ son.name }}</h3>
                         <p style="margin-top: -3px;">{{ son.singer }}</p>

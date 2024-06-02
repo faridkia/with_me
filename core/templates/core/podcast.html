@@ -33,9 +33,9 @@
                     {% for pod in podcasts %}
                     	<div class="box">
                         <div class="simages">
-                            <img src="{{ pod.image.url }}" alt="book" class="simage">
+                            <a href="{% url 'core:podcast_detail' pod.feeling pod.id %}"><img src="{{ pod.image.url }}" alt="podcast" class="simage"></a>
                         </div>
-                            <h3><a style="text-decoration: none" href="{% url 'core:podcast_detail' pod.feeling pod.id %}">{{ pod.name }}</a></h3>
+                            <h3>{{ pod.name }}</h3>
                         <p style="margin-top: -3px;">{{ pod.description | truncatewords:10 }}</p>
                     </div>
                     {% endfor %}

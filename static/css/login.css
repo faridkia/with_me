@@ -421,12 +421,13 @@ body{
 }
 .content_img{
   max-height: 100%;
-  background-color:red ;
-  
+  height: 100%;
+  width: 100%;
+
 }
 .img_login{
-  max-height: 100%;
-  max-width: 100%;
+   max-height: 100%;
+   width: 100%;
 }
 .content_login_boxs{
   font-family: dana-light;
@@ -438,6 +439,7 @@ body{
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 45%;
   
 }
 .content_login_box{
@@ -550,26 +552,40 @@ body{
   /* media query */
   /* Project Responsive */
   
-  @media only screen and (max-width: 1200px) {
-    .container {
-      max-width: 960px;
-    }
-  }
-  
-@media only screen and (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-}
+/*  @media only screen and (max-width: 1200px) {*/
+/*    .container {*/
+/*      max-width: 960px;*/
+/*    }*/
+/*  }*/
+/*  */
+/*@media only screen and (max-width: 992px) {*/
+/*    .container {*/
+/*        max-width: 720px;*/
+/*    }*/
+/*}*/
 
-@media only screen and (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
-}
+/*@media only screen and (max-width: 768px) {*/
+/*    .container {*/
+/*        max-width: 540px;*/
+/*    }*/
+/*}*/
 
-@media only screen and (max-width: 576px) {
-    .container {
-        max-width: 100%;
+/*@media only screen and (max-width: 576px) {*/
+/*    .container {*/
+/*        max-width: 100%;*/
+/*    }*/
+/*}*/
+@media (max-width: 768px) {
+    .content_img{
+        display: none;
+    }
+    .content_login_boxs{
+        width: 100%;
+    }
+    .btm_login{
+        padding: 1rem 4.5rem;
+    }
+    .caption{
+        font-size: 0.6rem;
     }
 }

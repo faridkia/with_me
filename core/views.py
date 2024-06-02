@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-# TODO :  links, login, logout ,Debug, data
+# TODO :  login and sign up image , Debug, Responsive, data
 from django.shortcuts import get_object_or_404
 from accounts.models import User
 from .models import *

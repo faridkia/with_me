@@ -33,7 +33,7 @@
                     {% for vid in videos %}
                     <div class="box">
                         <div class="simages">
-                            <img src="{{ vid.image.url }}" alt="book" class="simage">
+                            <a href="{% url 'core:video_detail' vid.feeling vid.id %}"><img src="{{ vid.image.url }}" alt="video" class="simage"></a>
                         </div>
                         <h3>{{ vid.name }}</h3>
                         <p style="margin-top: -3px;">{{ vid.description | truncatewords:10 }}</p>

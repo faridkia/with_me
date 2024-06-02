@@ -13,19 +13,19 @@
         <div class="container">
             <section class="header_top">
                 <div class="nav">
-                    <div class="nav_logo">
-                        <img src="{% static 'img/1.png' %}" alt="" class="nav_logo_img">
-                    </div>
                     <ul class="menu">
+                        <div class="nav_logo">
+                        <img src="{% static 'img/1.png' %}" alt="" class="nav_logo_img">
+                        </div>
                         <li class="menu_item"><a href="{% url 'core:home' %}" class="menu_item_link">صفحه اصلی</a></li>
                         <li class="menu_item"><a href="{% url 'core:about_us' %}" class="menu_item_link" >درباره ما</a></li>
                     </ul>
-                </div>
-                {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                     <a href="{% url 'accounts:logout' %}" class="heder_link">خروج</a>
                 {% else %}
-                <a href="{% url 'accounts:login' %}" class="heder_link">ورود|ثبت نام</a>
+                <a href="{% url 'accounts:login' %}" class="heder_link">ورود</a>
                 {% endif%}
+                </div>
             </section>
         </div>
     </header>
@@ -42,7 +42,7 @@
                     <p class="footer_p"><strong>شماره تماس:</strong>09115673743</p>
                     <p class="footer_p"><strong>ایمیل:</strong>sajjad.kafshgar123@gmail.com</p>
                 </div>
-                <div style="display: flex;flex-direction: column;" class="footer_left">
+                <div class="footer_left">
                     <div class="flex">
                         <div class="footer_contact_platforms"> </div>
                         <div class="footer_logos"><img src="{% static 'img/1 - Copy.png' %}" alt="" class="footer_logo"></div>
