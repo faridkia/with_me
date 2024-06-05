@@ -45,7 +45,7 @@ class SignUpView(View):
             user = User.objects.create(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             user.save()
             login(request, user)
-            return redirect('accounts:home')
+            return redirect('core:home')
         return render(request, 'accounts/sing-in.html', context={'form': form})
 
 

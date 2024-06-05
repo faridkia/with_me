@@ -33,7 +33,7 @@
                             <a href="{% url 'core:book_detail' boo.feeling boo.id %}"><img src="{{ boo.image.url }}" alt="book" class="simage"></a>
                         </div>
                         <h3>{{ boo.name }}</h3>
-                        <p style="margin-top: -3px;">{{ boo.description | truncatewords:10 }}</p>
+{#                        <p style="margin-top: -3px;">{{ boo.description | truncatewords:7 }}</p>#}
                         </div>
                     {% endfor %}
                 </div>

@@ -521,7 +521,7 @@ body{
   text-align: center;
   border-radius: 10px;
   padding:1rem 6rem ;
-
+  margin-top: 20px;
 }
 .btm_login_link{
   text-decoration: none;

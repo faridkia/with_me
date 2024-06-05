@@ -36,7 +36,7 @@
                             <a href="{% url 'core:podcast_detail' pod.feeling pod.id %}"><img src="{{ pod.image.url }}" alt="podcast" class="simage"></a>
                         </div>
                             <h3>{{ pod.name }}</h3>
-                        <p style="margin-top: -3px;">{{ pod.description | truncatewords:10 }}</p>
+{#                        <p style="margin-top: -3px;">{{ pod.description | truncatewords:7 }}</p>#}
                     </div>
                     {% endfor %}
 

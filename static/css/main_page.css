@@ -428,9 +428,8 @@
     margin: 0 auto;
     background-color: #538add;
     border-radius: 20px;
-    gap: 54rem;
-    padding: 0.5rem 0;
-
+    gap: 56rem;
+    /*padding: 0.5rem 0;*/
 }
 .nav {
       flex-direction: row;
@@ -441,20 +440,20 @@
     .nav ul {
       flex-direction: row;
       justify-content: flex-start;
+      align-items: center;
     }
 .nav_logo{
-  display: none;
+    display: flex;
+    justify-content: flex-start;
 }
-
 .menu{
     list-style-type: none;
-    padding-left: 0;
-    margin: 0;
     display: flex;
-
+    justify-content: flex-start;
+    margin: 0;
 }
 .menu_item{
-    padding: 0 1rem;
+    padding: 0 0.25rem;
 
 }
 .menu_item_link{
@@ -462,14 +461,14 @@
     text-decoration: none;
 }
 .heder_link{
-    
-    padding: 0.75rem 1.2rem;
+
+    padding: 0.8rem 1.0rem;
     background:#f9f9f9;
     border: 1px solid #f9f9f9 ;
     border-radius: 0.5rem;
     text-decoration: none;
     color: #000;
-    margin-right: -100px;
+    margin-right: -10px;
 }
 
 /* start_main */
@@ -525,7 +524,7 @@ font-size: 24px;
 
 .main_plan{
 display: flex;
-margin: 7rem 0;
+margin: 3rem 0;
 gap: 10rem;
 
 }
@@ -691,7 +690,7 @@ h2.fade-in {
 
 }
 .footer_logo{
-  width: 145px;
+  width: 115px;
   height: 70px;
   object-fit: cover
 }
@@ -700,34 +699,11 @@ h2.fade-in {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  
 }
-
-
-
-
       /* media query */
     /* Project Responsive */
-    
- @media only screen and (max-width: 1200px) {
-        .container {
-          max-width: 960px;
-        }
-      }
 
-    @media only screen and (max-width: 992px) {
-        .container {
-            max-width: 720px;
-        }
-    }
-
-    @media only screen and (max-width: 768px) {
-        .container {
-            max-width: 540px;
-        }
-    }
-
-    @media only screen and (max-width: 576px) {
+    @media (max-width: 768px) {
         .container {
             max-width: 576px;
             padding: 0 4rem;
@@ -740,10 +716,12 @@ h2.fade-in {
           padding-right: 1rem;
           padding-left: 1rem;
       }
-      .header{
-        font-family: dana-light;
-        padding: 1rem 0;
-        border: 1px solid #fff;
+      header {
+        flex-direction: column;
+        width: 98%;
+    }
+    .nav_logo{
+      /*display: none;*/
     }
       .header_top{
         display: flex;
@@ -751,33 +729,22 @@ h2.fade-in {
         margin: 0 auto;
         background-color: #538add;
         border-radius: 20px;
-        /* gap: 54rem; */
-        padding: 0.5rem 0;
-
+        gap: 2rem;
+        padding: 0.25rem 0;
+        width: 90vw;
+        justify-content: center;
       }
       .nav{
-        display:flex;
-        align-items: center;
+        flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
     }
-    .nav_logo{
-      object-fit: cover;
-     padding-right: 2rem;
+    .nav ul {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
     }
-
-
-    .nav_logo_img{
-      width: 45px;
-      height: 25px;
-      object-fit: cover
-
-    }
-    .menu{
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-      display: none;
-
-  }
     /* main */
 
 
@@ -821,7 +788,10 @@ h2.fade-in {
 
           }
 
-
+        .nav_logo img{
+            width: 60px;
+            height: 60px;
+        }
         .main_plan{
           display: flex;
           margin-top: 2rem;
@@ -873,7 +843,9 @@ h2.fade-in {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            object-fit: cover
+            object-fit: cover;
+            margin-top: 3rem;
+
           }
           .main_category_img{
             width: 350px;

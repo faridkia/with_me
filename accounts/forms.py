@@ -17,7 +17,7 @@ class LoginForm(forms.Form):
 
 
 class SignUpForm(forms.Form):
-    username = forms.CharField(max_length=30)
+    username = forms.CharField(max_length=30,widget=forms.TextInput(attrs={'autocomplete':'off'}))
     password = forms.CharField(widget=forms.PasswordInput)
 
     def clean_username(self):

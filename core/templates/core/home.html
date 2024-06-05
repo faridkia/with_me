@@ -17,10 +17,11 @@
         <div class="container">
             <section class="header_top">
                 <div class="nav">
-                    <div class="nav_logo">
-                        <img src="{% static 'img/1.png' %}" alt="" class="nav_logo_img">
-                    </div>
+
                     <ul class="menu">
+                        <div class="nav_logo">
+                        <img style="width: 70px;height: 70px" src="{% static 'img/with_me1.png' %}" alt="" class="nav_logo_img">
+                        </div>
                         <li class="menu_item"><a href="{% url 'core:home' %}" class="menu_item_link">صفحه اصلی</a></li>
                         <li class="menu_item"><a href="{% url 'core:about_us' %}" class="menu_item_link" >درباره ما</a></li>
                     </ul>
@@ -28,7 +29,7 @@
                 {% if user.is_authenticated %}
                     <a href="{% url 'accounts:logout' %}" class="heder_link">خروج</a>
                 {% else %}
-                <a href="{% url 'accounts:login' %}" class="heder_link">ورود|ثبت نام</a>
+                <a href="{% url 'accounts:login' %}" class="heder_link">ورود</a>
                 {% endif%}
             </section>
         </div>
@@ -39,7 +40,7 @@
         <div class="container">
             <section class="main_header">
                 <div class="main_header_content">
-                    <h2 class="main_titel"> with me</h2>
+                    <h2 class="main_titel"> With Me</h2>
                     <p class="main_txt"> برای دوستی با شما طراحی شده است، که از طریق فیلم ها ، کتاب ها ، آهنگ ها و پادکست سعی می کند با شما ارتباط برقرار کند تا حال و آینده شما را بهتر کند</p>
                     <a href="#category" class="main_button">بزن بریم</a>
                 </div>
@@ -64,7 +65,7 @@
 
             <section class="main_categorys" id="category">
                 <div class="main_category">
-                   <h1 style="margin-bottom: 40px;">چه حسی داری؟</h1>
+                   <h1 style="margin-bottom: 40px;">چه حسی داری رفیق؟</h1>
                    <div class="category_box_1">
                         <div class="category_row" id="category_row_1">
                             <h2 style="z-index: 3">خوشحالم 😁</h2>

@@ -17,7 +17,7 @@ class Book(models.Model):
     feeling = models.ForeignKey(Feeling, on_delete=models.PROTECT, related_name='books')
     image = models.ImageField(upload_to='books/images/', verbose_name='عکس')
     name = models.CharField(max_length=60)
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=1000)
     author = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ایجاد')
 
@@ -30,7 +30,6 @@ class Podcast(models.Model):
     feeling = models.ForeignKey(Feeling, on_delete=models.PROTECT, related_name='podcast')
     audio = models.FileField(upload_to='audios/audios/')
     name = models.CharField(max_length=100)
-    description = models.TextField(max_length=500)
     image = models.ImageField(upload_to='audios/images/')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ایجاد')
 
@@ -82,7 +81,7 @@ class Video(models.Model):
     image = models.ImageField(upload_to='videos/images/')
     video = models.FileField(upload_to='videos/')
     name = models.CharField(max_length=50)
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ایجاد')
 
     def __str__(self):
