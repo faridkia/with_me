@@ -136,3 +136,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.User'
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
+
+AWS_S3_ACCESS_KEY_ID = '75d558bf-1cf5-4246-943a-9d81c0f5decf'
+AWS_S3_SECRET_ACCESS_KEY = '5980d9b0ea1325bfa01fd67a41af3375841d24cea4dc24fae7710a98538a1dc6'
+AWS_S3_ENDPOINT_URL = 'https://skamacademy.s3.ir-thr-at1.arvanstorage.ir'
+AWS_STORAGE_BUCKET_NAME = 'skamacademy'
+AWS_SERVICE_NAME = 's3'
+AWS_S3_FILE_OVERWRITE = False
