@@ -20,8 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_*4+l=(k86$o0$at_bug!qwxa5=-8tp)1ta7%zq1hf$vaxc-km'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -146,9 +145,3 @@ STORAGES = {
     },
 }
 
-AWS_S3_ACCESS_KEY_ID = '75d558bf-1cf5-4246-943a-9d81c0f5decf'
-AWS_S3_SECRET_ACCESS_KEY = '5980d9b0ea1325bfa01fd67a41af3375841d24cea4dc24fae7710a98538a1dc6'
-AWS_S3_ENDPOINT_URL = 'https://skamacademy.s3.ir-thr-at1.arvanstorage.ir'
-AWS_STORAGE_BUCKET_NAME = 'skamacademy'
-AWS_SERVICE_NAME = 's3'
-AWS_S3_FILE_OVERWRITE = False
